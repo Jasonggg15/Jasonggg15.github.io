@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason Gan — Projects</title>
+  <meta name="description" content="Selected projects by Jason Gan — robotics, embodied AI, and things built for fun.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- 顶部导航与首页一致;改动时记得同步 index.html、blog/index.html、blog/posts/ 下的文章页 -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="site-title" href="../index.html" aria-label="Jason Gan — Home"><img src="../assets/img/logo-gan.svg" alt="Jason Gan" width="36" height="38"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#news">News</a>
+        <a href="../publications/">Publications</a>
+        <a href="./" class="active" aria-current="page">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#awards">Awards</a>
+        <!-- 暂时隐藏(还没内容):<a href="../blog/">Blog</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-single">
+    <main id="content">
+      <section class="intro">
+        <h2>Projects</h2>
+        <p class="page-note">Every project below is an unforgettable memory — of joy, of learning, and of friendship. Most of them would not have been possible without the help of my good friends, from whom I have learned so much along the way. I am always grateful to them.</p>
+      </section>
+
+      <div class="project-list">
+        <!-- 新增项目:① 在 projects/ 下复制一个详情页(如 robomaster-2025.html)改成新内容;
+             ② 这里复制一个 <article class="publication proj-row"> 卡片,新的放最上面。
+             缩略图取详情页主图;h3 链接与缩略图链接都指向详情页 -->
+
+        <article class="publication proj-row">
+          <div class="pub-year">2025</div>
+          <a class="pub-thumb" href="circle-leg.html" tabindex="-1" aria-label="Open project: Circle Leg"><img src="../assets/img/proj-circleleg-2.jpg" alt="" loading="lazy"></a>
+          <div>
+            <h3><a href="circle-leg.html">Circle Leg</a></h3>
+            <p class="entry-role">ELEC-3300 Course Project</p>
+            <p>A wheel-legged robot that balances and drives on two hub-motor wheel-legs — custom control electronics, LED rings, and an on-board status display.</p>
+          </div>
+        </article>
+
+
+        <article class="publication proj-row">
+          <div class="pub-year">2024–25</div>
+          <a class="pub-thumb" href="robomaster-2025.html" tabindex="-1" aria-label="Open project: RoboMaster 2025"><img src="../assets/img/proj-rm2025.jpg" alt="" loading="lazy"></a>
+          <div>
+            <h3><a href="robomaster-2025.html">RoboMaster 2025 — Infantry Robot</a></h3>
+            <p class="entry-role">HKUST RoboMaster Team ENTERPRIZE &middot; Team Leader</p>
+            <p>The wheel-legged infantry robot I led the development of throughout the 2025 season — top infantry of the national championship with the highest average damage per match (1375.1 pts); University League Zhejiang regional champion.</p>
+          </div>
+        </article>
+
+        <article class="publication proj-row">
+          <div class="pub-year">2023–24</div>
+          <a class="pub-thumb" href="robomaster-2024.html" tabindex="-1" aria-label="Open project: RoboMaster 2024"><img src="../assets/img/proj-rm2024.jpg" alt="" loading="lazy"></a>
+          <div>
+            <h3><a href="robomaster-2024.html">RoboMaster 2024 — Engineer Robot</a></h3>
+            <p class="entry-role">HKUST RoboMaster Team ENTERPRIZE &middot; Embedded Engineer</p>
+            <p>The 2024-season engineer robot — my first season with ENTERPRIZE, working on firmware and control electronics.</p>
+          </div>
+        </article>
+
+        <article class="publication proj-row">
+          <div class="pub-year">2023</div>
+          <a class="pub-thumb" href="voron-0.html" tabindex="-1" aria-label="Open project: Voron 0.2"><img src="../assets/img/proj-voron.jpg" alt="" loading="lazy"></a>
+          <div>
+            <h3><a href="voron-0.html">Voron 0.2 3D Printer</a></h3>
+            <p class="entry-role">Personal Project</p>
+            <p>A Voron 0.2 FDM 3D printer I assembled and tuned. It now prints most of the brackets and prototypes for my other projects.</p>
+          </div>
+        </article>
+
+        <article class="publication proj-row">
+          <div class="pub-year">2022–23</div>
+          <a class="pub-thumb" href="fpv-drones.html" tabindex="-1" aria-label="Open project: FPV Drones"><img src="../assets/img/proj-fpv-3.jpg" alt="" loading="lazy"></a>
+          <div>
+            <h3><a href="fpv-drones.html">FPV Drones</a></h3>
+            <p class="entry-role">Personal Project</p>
+            <p>Building and flying FPV quadcopters — a ducted cinewhoop, a freestyle quad, and a toothpick.</p>
+          </div>
+        </article>
+
+        <article class="publication proj-row">
+          <div class="pub-year">2022</div>
+          <a class="pub-thumb" href="holocubic.html" tabindex="-1" aria-label="Open project: HoloCubic"><img src="../assets/img/proj-holo.jpg" alt="" loading="lazy"></a>
+          <div>
+            <h3><a href="holocubic.html">HoloCubic</a></h3>
+            <p class="entry-role">Personal Project</p>
+            <p>A reproduction of Zhi Hui Jun's open-source pseudo-holographic desktop display — a beam-splitter prism makes the image float inside the glass.</p>
+          </div>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div>
+      <p>&copy; <span data-year>2026</span> Jason Gan</p>
+      <p>Last updated Oct 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

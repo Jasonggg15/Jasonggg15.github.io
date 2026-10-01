@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason Gan — Blog</title>
+  <meta name="description" content="Notes on research, engineering, and whatever else is on my mind.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- 顶部导航与首页一致;改动时记得同步 index.html 和 blog/posts/ 下的文章页 -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="site-title" href="../index.html" aria-label="Jason Gan — Home"><img src="../assets/img/logo-gan.svg" alt="Jason Gan" width="36" height="38"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#news">News</a>
+        <a href="../publications/">Publications</a>
+        <a href="../projects/">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#awards">Awards</a>
+        <!-- 暂时隐藏(还没内容):<a href="./" class="active" aria-current="page">Blog</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-single">
+    <main id="content">
+      <section class="intro">
+        <h2>Blog</h2>
+      </section>
+
+      <ul class="post-list">
+        <!-- 新文章:复制一个 <li>,按日期倒序排列(新的在最上面) -->
+        <li>
+          <span class="date">Sep 27, 2026</span>
+          <div>
+            <h3><a href="posts/2026-09-27-hello-world.html">Hello, World</a></h3>
+            <p>Why I started writing, and how this site is built.</p>
+          </div>
+        </li>
+      </ul>
+    </main>
+  </div>
+
+  <footer>
+    <div>
+      <p>&copy; <span data-year>2026</span> Jason Gan</p>
+      <p>Last updated Oct 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

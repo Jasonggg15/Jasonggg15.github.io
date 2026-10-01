@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason Gan — Publications</title>
+  <meta name="description" content="Publications by Jason Gan — world action models, vision-language-action, and robotic manipulation.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- 顶部导航与首页一致;改动时记得同步 index.html、projects/、blog/ 各处 -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="site-title" href="../index.html" aria-label="Jason Gan — Home"><img src="../assets/img/logo-gan.svg" alt="Jason Gan" width="36" height="38"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#news">News</a>
+        <a href="./" class="active" aria-current="page">Publications</a>
+        <a href="../projects/">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#awards">Awards</a>
+        <!-- 暂时隐藏(还没内容):<a href="../blog/">Blog</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-single">
+    <main id="content">
+      <section class="intro">
+        <h2>Publications</h2>
+      </section>
+
+      <!-- 搜索框:边输入边过滤;匹配标题/作者/会议 + 每条的 data-keywords 隐藏关键词 -->
+      <div class="pub-toolbar">
+        <input type="search" id="pub-search" placeholder="Search by title, author, venue…" aria-label="Search publications">
+        <span class="pub-count" id="pub-count">4 publications</span>
+      </div>
+      <p class="section-note" id="pub-note"><sup>*</sup> Equal contribution.</p>
+
+      <div class="pub-list">
+        <!-- 新增论文:整个复制 <article class="publication">…</article>,新的放最上面。
+             data-keywords 里写搜索关键词(缩写/主题词/平台名),不显示但能被搜到。
+             自己的名字 <strong> 加粗;共同一作在作者后加 <sup>*</sup>;
+             首页 Selected Publications 里的精选条目要另外手动同步(index.html) -->
+
+        <article class="publication" data-keywords="echo event camera event-based vision wrist-only manipulation event encoder latent world model gemma vlm action expert rlbench under review">
+          <div class="pub-year">2026</div>
+          <div class="pub-thumb"><img src="../assets/img/pub-echo.jpg" alt="" width="690" height="359" loading="lazy"></div>
+          <div>
+            <h3>ECHO: Event-Augmented Context with Hindsight and Outlook for Wrist-Only Manipulation</h3>
+            <p class="authors">
+              Xinyue Wang<sup>*</sup>, Yicheng Jiang<sup>*</sup>, <strong>Zesen Gan</strong>, Junhao He, Jiaxu Wang,
+              Junhao Li, Jingtao Zhang, Tianlun He, Jianan Wang, Isabel Guan, Qiming Shao
+            </p>
+            <p class="venue">Under review</p>
+            <div class="item-links">
+              <a href="https://arxiv.org/abs/2609.34893" target="_blank" rel="noreferrer">arXiv</a>
+              <a href="https://arxiv.org/pdf/2609.34893" target="_blank" rel="noreferrer">PDF</a>
+              <a href="https://echo-wam.github.io/" target="_blank" rel="noreferrer">Page</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication" data-keywords="world action model wam vla vision-language-action embodied ai manipulation robotwin rmbench astribot under review">
+          <div class="pub-year">2026</div>
+          <div class="pub-thumb"><img src="../assets/img/pub-arwam.jpg" alt="" width="690" height="261" loading="lazy"></div>
+          <div>
+            <h3>AR-WAM: A Visual-Conditioned Agent-Ready World Action Model for Robotic Manipulation</h3>
+            <p class="authors">
+              Yicheng Jiang<sup>*</sup>, <strong>Zesen Gan</strong><sup>*</sup>, Xiaobo Wang, Tianlun He, Chenxu Zhao,
+              Minghui Wu, Xinyue Wang, Jiaxu Wang, Junhao He, Jianan Wang, Qiming Shao
+            </p>
+            <p class="venue">Under review</p>
+            <div class="item-links">
+              <a href="https://arxiv.org/abs/2609.23578" target="_blank" rel="noreferrer">arXiv</a>
+              <a href="https://arxiv.org/pdf/2609.23578" target="_blank" rel="noreferrer">PDF</a>
+              <a href="https://ar-wam.github.io/" target="_blank" rel="noreferrer">Page</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication" data-keywords="structural latent points pl-vae point cloud 3dgs gaussian splatting pretraining visual representation rlbench maniskill icra">
+          <div class="pub-year">2026</div>
+          <div class="pub-thumb"><img src="../assets/img/pub-slp.jpg" alt="" width="690" height="317" loading="lazy"></div>
+          <div>
+            <h3>Learning Structural Latent Points for Efficient Visual Representations in Robotic Manipulation</h3>
+            <p class="authors">
+              Yicheng Jiang<sup>*</sup>, Jiaxu Wang<sup>*</sup>, Junhao He, <strong>Zesen Gan</strong>, Junhao Li,
+              Qiang Zhang, Jingkai Sun, Jiahang Cao, Mingyuan Sun, Xiangyu Yue, Qiming Shao
+            </p>
+            <p class="venue">ICRA 2026</p>
+            <div class="item-links">
+              <a href="https://arxiv.org/abs/2605.21258" target="_blank" rel="noreferrer">arXiv</a>
+              <a href="https://arxiv.org/pdf/2605.21258" target="_blank" rel="noreferrer">PDF</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="publication" data-keywords="mvista 4d world model view-consistent test-time action inference residual inverse dynamics rlbench robotwin icml">
+          <div class="pub-year">2026</div>
+          <div class="pub-thumb"><img src="../assets/img/pub-mvista.jpg" alt="" width="690" height="197" loading="lazy"></div>
+          <div>
+            <h3>MVISTA-4D: View-Consistent 4D World Model with Test-Time Action Inference for Robotic Manipulation</h3>
+            <p class="authors">
+              Jiaxu Wang<sup>*</sup>, Yicheng Jiang<sup>*</sup>, Tianlun He, Jingkai Sun, Qiang Zhang, Junhao He,
+              Jiahang Cao, <strong>Zesen Gan</strong>, Mingyuan Sun, Qiming Shao, Xiangyu Yue
+            </p>
+            <p class="venue">ICML 2026</p>
+            <div class="item-links">
+              <a href="https://arxiv.org/abs/2602.09878" target="_blank" rel="noreferrer">arXiv</a>
+              <a href="https://arxiv.org/pdf/2602.09878" target="_blank" rel="noreferrer">PDF</a>
+              <a href="https://mercerai.github.io/MVISTA-4D/" target="_blank" rel="noreferrer">Page</a>
+            </div>
+          </div>
+        </article>
+
+        <p class="pub-empty" id="pub-empty" hidden>No publications match your search.</p>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div>
+      <p>&copy; <span data-year>2026</span> Jason Gan</p>
+      <p>Last updated Oct 2026</p>
+    </div>
+  </footer>
+
+  <!-- 本页专属:搜索过滤(内联,与页面同文件,不存在缓存不同步问题)。
+       玩法参考标准 filter 实现(al-folio bibsearch / Fuse.js):
+       - 可见文字 + data-keywords 做空格分词 AND 匹配
+       - 忽略连字符/标点的归一化:arwam / ar-wam / ARWAM 都能命中
+       - 命中词 <mark> 高亮;新出现的条目淡入,消失即时 -->
+  <script>
+    (function () {
+      "use strict";
+      var input = document.getElementById("pub-search");
+      if (!input) return;
+      var pubs = Array.prototype.slice.call(
+        document.querySelectorAll(".pub-list .publication")
+      );
+      var count = document.getElementById("pub-count");
+      var empty = document.getElementById("pub-empty");
+      var note = document.getElementById("pub-note");
+      var HL_SEL = ["h3", ".authors", ".venue"];
+
+      var strip = function (s) {
+        return s.toLowerCase().replace(/[^a-z0-9一-鿿]+/g, "");
+      };
+
+      /* 预处理:可搜索文本(普通 + 归一化)、各高亮区的原始 HTML。
+         语料只取语义字段(标题/作者/会议/年份 + data-keywords),
+         不含 arXiv/PDF 等按钮文字——否则搜 "ar" 会匹配到每条的 "arXiv" 徽章 */
+      var data = pubs.map(function (el) {
+        var raw =
+          HL_SEL.map(function (sel) {
+            var n = el.querySelector(sel);
+            return n ? n.textContent : "";
+          }).join(" ") +
+          " " +
+          (el.querySelector(".pub-year") || { textContent: "" }).textContent +
+          " " +
+          (el.getAttribute("data-keywords") || "");
+        raw = raw.toLowerCase();
+        return {
+          norm: raw,
+          flat: strip(raw),
+          html: HL_SEL.map(function (sel) {
+            var n = el.querySelector(sel);
+            return n ? n.innerHTML : null;
+          })
+        };
+      });
+
+      function restore(el, i) {
+        HL_SEL.forEach(function (sel, j) {
+          var n = el.querySelector(sel);
+          if (n && data[i].html[j] != null) n.innerHTML = data[i].html[j];
+        });
+      }
+
+      /* 在文本节点里给命中词包 <mark>(不碰标签,不会弄坏链接/上标) */
+      function highlight(el, terms) {
+        HL_SEL.forEach(function (sel) {
+          var root = el.querySelector(sel);
+          if (!root) return;
+          var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+          var nodes = [];
+          while (walker.nextNode()) nodes.push(walker.currentNode);
+          nodes.forEach(function (node) {
+            var text = node.nodeValue, lower = text.toLowerCase();
+            var hits = [];
+            terms.forEach(function (t) {
+              var i = lower.indexOf(t);
+              while (i !== -1) {
+                hits.push([i, i + t.length]);
+                i = lower.indexOf(t, i + t.length);
+              }
+            });
+            if (!hits.length) return;
+            hits.sort(function (a, b) { return a[0] - b[0]; });
+            var merged = [];
+            hits.forEach(function (h) {
+              var last = merged[merged.length - 1];
+              if (last && h[0] <= last[1]) last[1] = Math.max(last[1], h[1]);
+              else merged.push(h.slice());
+            });
+            var frag = document.createDocumentFragment(), pos = 0;
+            merged.forEach(function (h) {
+              frag.appendChild(document.createTextNode(text.slice(pos, h[0])));
+              var mark = document.createElement("mark");
+              mark.textContent = text.slice(h[0], h[1]);
+              frag.appendChild(mark);
+              pos = h[1];
+            });
+            frag.appendChild(document.createTextNode(text.slice(pos)));
+            node.parentNode.replaceChild(frag, node);
+          });
+        });
+      }
+
+      input.addEventListener("input", function () {
+        var terms = input.value.toLowerCase().split(/\s+/).filter(Boolean);
+        var shown = 0;
+        pubs.forEach(function (el, i) {
+          var wasHidden = el.style.display === "none";
+          var hit = terms.every(function (t) {
+            if (data[i].norm.indexOf(t) !== -1) return true;
+            var ft = strip(t);
+            return ft !== "" && data[i].flat.indexOf(ft) !== -1;
+          });
+          el.style.display = hit ? "" : "none";
+          restore(el, i);
+          if (hit) {
+            shown++;
+            if (terms.length) highlight(el, terms);
+            /* 只对"新出现"的条目播淡入;一直在的保持不动 */
+            if (wasHidden) {
+              el.classList.remove("enter");
+              void el.offsetWidth;
+              el.classList.add("enter");
+            }
+          }
+        });
+        if (count) {
+          count.textContent = terms.length
+            ? "Showing " + shown + " of " + pubs.length
+            : pubs.length + " publications";
+        }
+        /* 无结果时只留提示,脚注一起藏掉 */
+        if (empty) empty.hidden = shown !== 0;
+        if (note) note.hidden = shown === 0 && terms.length > 0;
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason Gan — Circle Leg</title>
+  <meta name="description" content="Circle Leg — a wheel-legged robot built as the ELEC-3300 course project at HKUST.">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/fonts.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <!-- 顶部导航与首页一致;改动时记得同步 index.html、publications/、blog/ 各处 -->
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="site-title" href="../index.html" aria-label="Jason Gan — Home"><img src="../assets/img/logo-gan.svg" alt="Jason Gan" width="36" height="38"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#news">News</a>
+        <a href="../publications/">Publications</a>
+        <a href="./" class="active">Projects</a>
+        <a href="../index.html#experience">Experience</a>
+        <a href="../index.html#awards">Awards</a>
+        <!-- 暂时隐藏(还没内容):<a href="../blog/">Blog</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-single">
+    <main id="content">
+      <section class="intro">
+        <p class="back-link"><a href="./"><span class="arr arr-l">&#8592;</span> All projects</a></p>
+        <h2>Circle Leg</h2>
+        <p class="proj-meta">ELEC-3300 Course Project &middot; 2025</p>
+      </section>
+
+      <div class="proj-body">
+        <p>A wheel-legged robot that balances and drives on two hub-motor wheel-legs — my final project for ELEC-3300. I did the full stack myself: structure design and manufacture, a self-developed main control board, and all of the firmware.</p>
+        <p>The wheel-leg configuration references the design of invention patent <a href="https://patents.google.com/patent/CN117141610B" target="_blank" rel="noreferrer">CN202311348645.X</a>.</p>
+        <div class="proj-photos">
+          <img src="../assets/img/proj-circleleg-2.jpg" alt="Circle Leg robot, top view with LED rings" loading="lazy">
+          <img src="../assets/img/proj-circleleg-cad.jpg" alt="Circle Leg SolidWorks assembly model" loading="lazy">
+        </div>
+
+        <h3>Hardware — custom control board</h3>
+        <p>The robot runs on a main control board I designed from scratch — schematic, PCB layout, and manufacture — around an STM32G473:</p>
+        <ul>
+          <li>24&nbsp;V Li-ion battery, two DC-DC buck converters and three LDO rails, with ADC voltage monitoring</li>
+          <li>FDCAN bus to two M3508 wheel motors and two GM6020 hip motors</li>
+          <li>ICM42688 IMU (SPI) with a PWM-controlled heater, ILI9431 LCD (SPI), FT6336 touch screen (I2C), buzzer, and external flash</li>
+          <li>128 WS2812B LEDs and a DR16 remote-control receiver (UART/DBUS)</li>
+        </ul>
+        <figure class="proj-figure">
+          <img src="../assets/img/proj-circleleg-board-3.jpg" alt="Manufactured main control board" width="475" loading="lazy">
+          <figcaption>The manufactured main control board.</figcaption>
+        </figure>
+        <figure class="proj-figure">
+          <img src="../assets/img/proj-circleleg-system.jpg" alt="Embedded system diagram of Circle Leg" loading="lazy">
+          <figcaption>System overview — power tree and peripheral buses around the STM32G473 main control board.</figcaption>
+        </figure>
+
+        <h3>Control &amp; firmware</h3>
+        <ul>
+          <li>Attitude estimation with a Madgwick filter fusing the 6-axis IMU</li>
+          <li>LQR balance controller, with the wheel-leg multibody dynamics modeled in Simulink</li>
+          <li>FreeRTOS, interrupt-driven real-time tasks; a CAN-manager middleware for motor communication</li>
+          <li>Disconnect detection via DMA + software timers, and per-module error handling and recovery</li>
+        </ul>
+        <figure class="proj-figure">
+          <img src="../assets/img/proj-circleleg-lqr.jpg" alt="Wheel-leg multibody model in Simulink" loading="lazy">
+          <figcaption>Wheel-leg multibody model used for the downstream LQR design.</figcaption>
+        </figure>
+
+        <h3>On-board UI</h3>
+        <ul>
+          <li>A small LCD UI framework written from scratch — a 30&nbsp;Hz display task with partial redraws, and scenes for LED configuration, system status, and a 3D-projected IMU pose view</li>
+          <li>LED rings with breathing / fixed / stream effects in static, random, or rainbow colors, all configurable from the LCD</li>
+        </ul>
+        <div class="proj-photos">
+          <img src="../assets/img/proj-circleleg-lcd-1.jpg" alt="LCD UI — LED configuration scene" loading="lazy">
+          <img src="../assets/img/proj-circleleg-lcd-2.jpg" alt="LCD UI — IMU pose scene" loading="lazy">
+        </div>
+
+        <div class="proj-photos">
+          <img src="../assets/img/proj-circleleg-assembly.jpg" alt="Circle Leg final assembly on the bench" loading="lazy">
+          <img src="../assets/img/proj-circleleg-sparks.jpg" alt="A wheel-leg throwing sparks during testing" loading="lazy">
+        </div>
+        <p class="photo-note">Final assembly in the lab — and a little fireworks show, the day before the final demo.</p>
+
+        <h3>Final demo</h3>
+        <div class="proj-videos">
+          <video controls playsinline preload="none" width="1920" height="1080" poster="../assets/img/proj-circleleg-demo-1.jpg" src="../assets/vid/circleleg-demo-1.mp4"></video>
+          <video controls playsinline preload="none" width="1920" height="1080" poster="../assets/img/proj-circleleg-demo-2.jpg" src="../assets/vid/circleleg-demo-2.mp4"></video>
+          <video controls playsinline preload="none" width="1920" height="1080" poster="../assets/img/proj-circleleg-demo-3.jpg" src="../assets/vid/circleleg-demo-3.mp4"></video>
+          <video controls playsinline preload="none" width="1080" height="1920" poster="../assets/img/proj-circleleg-demo-4.jpg" src="../assets/vid/circleleg-demo-4.mp4"></video>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <div>
+      <p>&copy; <span data-year>2026</span> Jason Gan</p>
+      <p>Last updated Oct 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

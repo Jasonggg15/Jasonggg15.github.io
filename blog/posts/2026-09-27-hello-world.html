@@ -1,0 +1,90 @@
+<!doctype html>
+<!--
+  ════════════════════════════════════════════════════════════════
+  博客文章模板 — 写新文章时:
+  1. 复制本文件,文件名改为  YYYY-MM-DD-你的-slug.html
+  2. 修改 <title>、<h1>、日期和正文
+  3. 回到 blog/index.html,在 <ul class="post-list"> 顶部加一行链接
+  ════════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jason Gan — Hello, World</title>
+  <meta name="description" content="Why I started writing, and how this site is built.">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/fonts.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <script src="../../assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <a class="site-title" href="../../index.html" aria-label="Jason Gan — Home"><img src="../../assets/img/logo-gan.svg" alt="Jason Gan" width="36" height="38"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="../../index.html#about">About</a>
+        <a href="../../index.html#news">News</a>
+        <a href="../../publications/">Publications</a>
+        <a href="../../projects/">Projects</a>
+        <a href="../../index.html#experience">Experience</a>
+        <a href="../../index.html#awards">Awards</a>
+        <!-- 暂时隐藏(还没内容):<a href="../" class="active" aria-current="page">Blog</a> -->
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-single">
+    <main id="content">
+      <article>
+        <header class="post-header">
+          <a class="back" href="../">&larr; All posts</a>
+          <h1>Hello, World</h1>
+          <p class="post-meta">Sep 27, 2026 &middot; 2 min read</p>
+        </header>
+
+        <div class="prose">
+          <p>
+            I have been meaning to set up a proper corner of the internet for a while —
+            a place that is mine, that loads fast, and that I fully control. This is it.
+          </p>
+          <p>
+            The plan is to write occasionally about research (what I am working on, what
+            I got wrong along the way), about engineering, and about whatever else seems
+            worth writing down. No schedule, no promises.
+          </p>
+
+          <h2>How this site is built</h2>
+          <p>
+            Deliberately boring technology: hand-written HTML and CSS, a few lines of
+            vanilla JavaScript, and no build step. Every page is a file; every file is
+            readable. If you are curious, the whole thing is inspectable with
+            <code>View Source</code>.
+          </p>
+          <pre><code>page/
+├── index.html          # the main page
+├── blog/               # this blog
+└── assets/             # stylesheets, fonts, one script</code></pre>
+
+          <blockquote>
+            <p>Simplicity is a feature. The less machinery between an idea and the page,
+            the more likely I am to actually publish it.</p>
+          </blockquote>
+
+          <p>See you in the next one.</p>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <div>
+      <p>&copy; <span data-year>2026</span> Jason Gan</p>
+      <p>Last updated Oct 2026</p>
+    </div>
+  </footer>
+</body>
+</html>
